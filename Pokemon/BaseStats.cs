@@ -46,7 +46,6 @@ namespace Pokemon
         public BaseStats(int hp, int attack, int specialattack,int specialdefense, int defense, int speed)
         {
           
-
             HP = hp;
             Attack = attack;
             SpecialAttack = specialattack;
