@@ -20,14 +20,12 @@ namespace Pokemon
         private const int MAXIMUMLEVEL = 100;
 
 
-        
-
-
         public string Name { get; set; }
         public string Type { get; set; }
         public int Level { get; set; }
 
-        public Pokemon(string name, string type, int level)
+
+        public Pokemon(string name, string type, int level, BaseStats stats)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -36,14 +34,12 @@ namespace Pokemon
             Name = name;
             Type = type;
             Level = level;
-
-            if (employments != null)
-            {
-                EmploymentPositions = employments; //save it
-            }
+            stats = stats;
+            
         }
-        //The parent class is the one where this property is declared.
-        public List<BaseStats> Pokemonsds { get; private set; } = new List<BaseStats>();
+        //The parent class is the one where this property is declared. Didn't work initially 
+        //because basestats was not public
+        public List<BaseStats> PokemonStats { get; private set; } = new List<BaseStats>();
 
 
     }

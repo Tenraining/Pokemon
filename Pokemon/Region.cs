@@ -11,20 +11,19 @@ namespace Pokemon
         //Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Hisui (Sinnoh's past), and Paldea.
         //data members
 
-        private string _Location;
-        private string _Route;
-
-        //constants
-
-        public string Location { get; set; }
-        public string Route { get; set; }
-
-        public RegionType Type { get; set; }
-
-        public Region(RegionType type)
+        //A region has many Pokémon.
+        public List<Pokemon> Pokemons { get; private set; } = new List<Pokemon>();
+        public Region(string name, RegionType type)
         {
+            name = name;
             Type = type;
         }
+
+        public string Name { get; private set; }
+        public RegionType Type { get; private set; }
+
+
+
 
     }
 }

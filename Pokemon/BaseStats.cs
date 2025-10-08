@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon
 {
-    internal class BaseStats
+    public class BaseStats
     {
         private int _Hp;
         private int _Attack;
@@ -15,12 +15,12 @@ namespace Pokemon
         private int _SpecialDefense;
         private int _Speed;
 
-        public int HP { get; set; }
-        public int Attack { get; set; }
-        public int SpecialAttack { get; set; }
-        public int SpecialDefense { get; set; }
-        public int Defense { get; set; }
-        public int Speed { get; set; }
+        public int HP { get; private set; }
+        public int Attack { get; private set; }
+        public int SpecialAttack { get; private set; }
+        public int SpecialDefense { get; private set; }
+        public int Defense { get; private set; }
+        public int Speed { get; private set; }
 
         public BaseStats(int hp, int attack, int specialattack,int specialdefense, int defense, int speed)
         {
