@@ -15,14 +15,19 @@ namespace Pokemon
         private int _SpecialDefense;
         private int _Speed;
 
-
+        public int ValidateStats(string statName, int value)
+        {
+            if (value < 1 || value > 256)
+                throw new ArgumentOutOfRangeException(statName, value, $"{statName} must be between 1 and 256.");
+            return value;
+        }
         //Private sets will protect then from external modifications
         public int HP
         {
             get => _Hp;
             set
             {
-                if ValidateStat(nameof(HP), value);
+                if (ValidateStats(nameof(value), value)
                 {
                     throw new ArgumentOutOfRangeException(nameof(HP), value, "HP must be between 1 and 256.");
                 }
@@ -36,12 +41,7 @@ namespace Pokemon
         public int Defense { get; private set; }
         public int Speed { get; private set; }
 
-        public int ValidateStats(string statName, int value)
-        {
-            if (value < 1 || value > 256)
-                throw new ArgumentOutOfRangeException(statName, value, $"{statName} must be between 1 and 256.");
-            return value;
-        }
+        
 
         public BaseStats(int hp, int attack, int specialattack,int specialdefense, int defense, int speed)
         {
