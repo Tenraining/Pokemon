@@ -1,0 +1,9 @@
+Room Constructor	Success	Create a room without a collection of Wall instances but with a Floor value.
+Room Constructor	Success	Create a room without a collection of Wall instances and no floor value. Hint: check flooring with null, empty and blank strings.
+Room Constructor	Exception	A missing Name will throw an ArgumentNullException
+AddWall	Success	Add a wall to the Wall collection.
+AddWall	Exception	Missing wall instance parameter value (ArgumentNullException)
+AddWall	Exception	Wall planid parameter value already exists (ArgumentExpection). Check planid value is in the thrown message.
+RemoveWall	Success	Removes a wall from the Room instance
+RemoveWall	Exception	Missing planid parameter value (ArgumentNullException). Hint: check with null, empty and blank strings.
+RemoveWall	Exception	PlanId not found (ArgumentExpection
