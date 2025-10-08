@@ -42,7 +42,7 @@ namespace Pokemon
         public List<BaseStats> PokemonStats { get; private set; } = new List<BaseStats>();
 
 
-
+        //dANIEL WAS HERE 
         
     }
 
